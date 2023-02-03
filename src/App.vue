@@ -1,6 +1,6 @@
 <template>
   <CreateNoteForm @createNote="addNote" />
-  <NotesList :notes="notes" />
+  <NotesList :notes="notes" @removeNote="removeNote" />
 </template>
 
 <script>
@@ -32,6 +32,9 @@ export default {
   methods: {
     addNote(note) {
       this.notes.push(note)
+    },
+    removeNote(noteId) {
+      this.notes = this.notes.filter((n) => n.id !== noteId)
     },
   },
 }

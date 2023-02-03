@@ -56,11 +56,11 @@ export default {
   padding: 0;
 }
 .add-form__note-title {
-  padding: 5px 10px;
+  padding: 10px;
   border-radius: 5px;
 }
 .add-form__note-text {
-  padding: 5px 10px;
+  padding: 10px;
   border-radius: 5px;
 }
 .add-form__add-btn {
