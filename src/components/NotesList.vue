@@ -1,6 +1,6 @@
 <template lang="ru">
     <div class="notes-list">
-    <h2 class="notes-list__title">Ваши заметки</h2>
+    <h2 class="notes-list__title">{{notes.length>0 ?'Ваши заметки' : 'Заметок пока нет'}}</h2>
     <div class="notes-list__container">
       <note-item v-for="note in notes" :key="note.id" :note="note" @removeNote="removeNote"/>
     </div>
@@ -27,17 +27,19 @@ export default {
 .notes-list {
   margin: 0 auto;
   padding: 20px 0;
-  width: 80%;
+  width: 100%;
   max-width: 1280px;
   display: flex;
   flex-direction: column;
   gap: 15px;
+  box-sizing: border-box;
 }
 .notes-list__container {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 15px;
+  grid-template-rows: auto;
 }
 .notes-list__title {
   margin: 0;

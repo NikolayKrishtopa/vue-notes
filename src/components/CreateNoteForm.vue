@@ -14,7 +14,9 @@
       rows="5"
       placeholder="Введите текст заметки..."
     ></textarea>
-    <button @click="addNote" class="add-form__add-btn">Добавить заметку</button>
+    <my-button @click="addNote">
+      Добавить заметку<img class="add-form__add-icon" src="@/img/add.svg"
+    /></my-button>
   </div>
 </template>
 
@@ -46,7 +48,7 @@ export default {
 .add-form {
   margin: 15px auto 0;
   max-width: 1200px;
-  width: 80%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -58,19 +60,15 @@ export default {
 .add-form__note-title {
   padding: 10px;
   border-radius: 5px;
+  box-sizing: border-box;
 }
 .add-form__note-text {
   padding: 10px;
   border-radius: 5px;
+  box-sizing: border-box;
 }
-.add-form__add-btn {
-  padding: 10px;
-  background-color: lightgreen;
-  border-radius: 5px;
-  border: none;
-  cursor: pointer;
-}
-.add-form__add-btn:hover {
-  opacity: 0.7;
+.add-form__add-icon {
+  transform: scale(1.2);
+  margin-left: 20px;
 }
 </style>

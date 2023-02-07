@@ -1,17 +1,29 @@
 <!DOCTYPE html>
 <html lang="">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <title><%= htmlWebpackPlugin.options.title %></title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Vue notes</title>
   </head>
   <body>
-    <noscript>
-      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
-    </noscript>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
+    <div id="app" class="page"></div>
   </body>
+  <style>
+    .page {
+      max-width: 1280px;
+      padding: 20px 90px;
+      box-sizing: border-box;
+    }
+    @media (max-width: 980px) {
+      .page {
+        padding: 20px 60px;
+      }
+    }
+    @media (max-width: 780px) {
+      .page {
+        padding: 20px;
+      }
+    }
+  </style>
 </html>

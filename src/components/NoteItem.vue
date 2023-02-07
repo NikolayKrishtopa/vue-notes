@@ -2,7 +2,9 @@
   <div class="note-item">
     <p class="note-item__title">{{ note.title }}</p>
     <p class="note-item__text">{{ note.text }}</p>
-    <button class="note-item__remove-btn" @click="removeNote">X</button>
+    <button class="note-item__remove-btn" @click="removeNote">
+      <img src="../../src/img/remove.svg" class="note-item__remove-btn-icon"/>
+    </button>
   </div>
 </template>
 <script>
@@ -29,21 +31,27 @@ export default {
   flex-direction: column;
   gap: 10px;
   position: relative;
+  width: 100%;
+  box-sizing: border-box;
+  flex: 0 0;
+  height: 300px;
 }
 .note-item__title {
   margin: 0;
+  width: 100%;
   font-weight: bold;
   font-size: 1.1em;
 }
 .note-item__text {
+  width: 100%;
   margin: 0;
   font-size: 1em;
+  max-width: 200px;
 }
 .note-item__remove-btn {
   color: red;
   background-color: transparent;
-  border: solid 1px red;
-  border-radius: 4px;
+  border: none;
   padding: 0;
   margin: 0;
   position: absolute;
@@ -55,5 +63,8 @@ export default {
   align-items: center;
   justify-content: center;
   cursor: pointer;
+}
+.note-item__remove-btn-icon {
+  transform: scale(1.2);
 }
 </style>
